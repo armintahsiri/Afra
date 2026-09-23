@@ -1,0 +1,11 @@
+import type { Metadata } from 'next'
+import { AnnouncementBar } from '@/components/Header/AnnouncementBar'
+import { Footer } from '@/components/Footer/Footer'
+import { Header } from '@/components/Header/Header'
+import { createPageMetadata } from '@/lib/seo'
+
+export const metadata: Metadata = createPageMetadata({ title: 'قوانین و مقررات', description: 'قوانین و مقررات استفاده از خدمات افرا شاپ.', path: '/terms' })
+
+export default function TermsPage() {
+  return <><AnnouncementBar /><Header /><main><section className="mx-auto max-w-[1240px] px-7 pb-16 pt-[72px] max-[768px]:px-4 max-[768px]:pb-11 max-[768px]:pt-11 max-[480px]:px-3.5 max-[480px]:pt-9"><div className="mb-[30px] flex items-end justify-between gap-6 rounded-[24px] border border-line bg-surface p-[30px] shadow-[0_18px_38px_-30px_var(--shadow-soft)] [background-image:radial-gradient(520px_220px_at_12%_0%,rgba(33,150,243,.12),transparent_72%)] max-[768px]:items-start max-[768px]:flex-col max-[768px]:p-6 max-[480px]:rounded-[20px] max-[480px]:p-[22px_18px]"><div><span className="mb-3 inline-flex items-center gap-2 text-xs font-extrabold text-gold"><span className="h-2 w-2 rounded-full bg-gold shadow-[0_0_0_4px_rgba(33,150,243,.12)]" aria-hidden="true" /> افرا شاپ</span><h1 className="mb-2 text-[clamp(28px,5vw,46px)] leading-[1.35] text-text">قوانین و مقررات</h1><p className="m-0 max-w-[620px] leading-[1.9] text-muted">استفاده از خدمات افرا شاپ به معنی پذیرش موارد زیر است.</p></div></div><div className="rounded-[22px] border border-line bg-surface p-[30px] text-[14px] leading-[2] text-muted max-[480px]:p-5 [&_h2]:mb-2 [&_h2]:mt-0 [&_h2]:text-lg [&_h2]:font-bold [&_h2]:text-text [&_h2:not(:first-child)]:mt-7 [&_p]:mb-4 [&_p]:mt-0"><h2>خرید و تحویل</h2><p className="m-0 max-w-[620px] leading-[1.9] text-muted">اطلاعات محصول، روش تحویل و شرایط فعال‌سازی پیش از خرید نمایش داده می‌شود. محصولات دیجیتال پس از تأیید پرداخت از طریق راه ارتباطی ثبت‌شده تحویل داده می‌شوند.</p><h2>پشتیبانی</h2><p className="m-0 max-w-[620px] leading-[1.9] text-muted">در صورت بروز مشکل، اطلاعات سفارش و راه ارتباطی خود را برای پشتیبانی ارسال کن تا موضوع بررسی شود.</p><h2>نسخه نمایشی</h2><p className="m-0 max-w-[620px] leading-[1.9] text-muted">این پروژه در حال حاضر یک پیش‌نمایش frontend است و فرایند پرداخت و احراز هویت در آن به‌صورت mock اجرا می‌شود.</p></div></section></main><Footer /></>
+}

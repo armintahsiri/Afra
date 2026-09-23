@@ -1,0 +1,2 @@
+import type { IconProps } from './types'
+export function TelegramIcon(props: IconProps) { return <svg viewBox="0 0 48 48" role="img" aria-label="Telegram" {...props}><path fill="currentColor" d="M43.6 6.2 4.5 21.4c-2.7 1.1-2.7 4.9 0 6l9.9 3.8 3.8 11.4c.7 2.2 3.5 2.9 5.2 1.3l5.9-5.8 9.1 6.7c1.8 1.3 4.3.4 4.8-1.8l6.4-33.6c.5-2.5-1.9-4.1-4-3.2ZM18 29.8l-8.4-3.2 25.7-10-15.8 13.2-1.5 7.1-2.8-7.1 2.8 0Zm4.3 8.9 1.3-6.2 4.4 3.2-5.7 3Zm14.9.6-14.9-11L40 13.5l-2.8 25.8Z" /></svg> }

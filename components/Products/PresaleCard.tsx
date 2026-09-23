@@ -1,0 +1,9 @@
+import Link from 'next/link'
+import type { PresaleProduct } from '@/types'
+import { ROUTES } from '@/constants/routes'
+import { ProductArt } from '@/components/Shared/ProductArt'
+
+export interface PresaleCardProps { product: PresaleProduct }
+export function PresaleCard({ product }: PresaleCardProps) {
+  return <Link href={ROUTES.PRODUCT(product.id)} className="group block rounded-[18px] border border-line bg-white/[.72] p-[18px] backdrop-blur-[10px] transition-[transform,border-color,box-shadow] duration-200 hover:-translate-y-1.5 hover:scale-[1.02] hover:border-gold/45 hover:shadow-[0_20px_38px_-20px_var(--shadow-soft)] dark:bg-white/[.06] dark:border-white/[.12] dark:hover:border-white/25 dark:hover:shadow-[0_22px_40px_-20px_rgba(0,0,0,.5)] motion-reduce:transition-none" id={product.id}><ProductArt art={product.art} art1={product.art1} art2={product.art2} className="mb-3.5 h-[104px] rounded-[14px] text-[32px] font-extrabold" /><h3 className="m-0 mb-1 text-[15px] font-bold text-text dark:text-white">{product.title}</h3><p className="m-0 mb-3 text-[12px] text-muted dark:text-white/50">{product.description}</p><div className="mb-3.5 flex gap-1.5">{product.countdown.map((item) => <span className="flex-1 rounded-lg border border-line bg-surface px-0 py-1.5 text-center text-[12.5px] font-bold text-text dark:border-white/[.12] dark:bg-white/[.08] dark:text-white" key={item.label}>{item.value}<small className="mt-0.5 block text-[9.5px] font-medium text-muted dark:text-white/50">{item.label}</small></span>)}</div><div className="flex items-center justify-between"><span className="text-[14.5px] font-bold text-text dark:text-white">{product.price}<small className="me-[3px] text-[11px] font-medium text-muted dark:text-white/50">هزار تومان</small></span><span className="rounded-full bg-gold px-[13px] py-1.5 text-[12px] font-semibold text-white">پیش‌خرید</span></div></Link>
+}
