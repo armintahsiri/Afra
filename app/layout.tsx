@@ -46,5 +46,5 @@ export const metadata: Metadata = {
 const themeScript = `(() => { try { document.documentElement.classList.add('js-ready'); const saved = localStorage.getItem('afrashop-theme'); const theme = saved === 'dark' || saved === 'light' ? saved : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); document.documentElement.setAttribute('data-theme', theme); } catch (_) {} })()`
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
-  return <html lang="fa" dir="rtl" className={`${vazirmatn.variable} ${ibmPlexMono.variable}`} suppressHydrationWarning><head><script dangerouslySetInnerHTML={{ __html: themeScript }} /></head><body><ThemeProvider><AuthProvider><CartProvider><ToastProvider>{children}</ToastProvider></CartProvider></AuthProvider></ThemeProvider></body></html>
+  return <html lang="fa" dir="rtl" className={`${vazirmatn.variable} ${ibmPlexMono.variable}`} suppressHydrationWarning><head><script dangerouslySetInnerHTML={{ __html: themeScript }} /></head><body suppressHydrationWarning><ThemeProvider><AuthProvider><CartProvider><ToastProvider>{children}</ToastProvider></CartProvider></AuthProvider></ThemeProvider></body></html>
 }

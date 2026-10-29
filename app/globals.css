@@ -1,6 +1,21 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@layer theme, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+@config "../tailwind.config.cjs";
+
+.fade-in-on-scroll {
+  display: contents;
+}
+
+.fade-in-on-scroll > * {
+  transition: opacity 500ms, transform 500ms;
+  transition-delay: var(--reveal-delay);
+}
+
+html.js-ready .fade-in-on-scroll:not([data-visible="true"]) > * {
+  opacity: 0;
+  transform: translateY(1rem);
+}
 
 /* ===== Design tokens ===== */
 :root {

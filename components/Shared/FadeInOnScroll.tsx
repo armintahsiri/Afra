@@ -1,11 +1,9 @@
 'use client'
 
-import { cloneElement, type CSSProperties, type ReactElement } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import { useEffect, useRef, useState } from 'react'
 
-type FadeChildProps = { className?: string; style?: CSSProperties }
-
-export function FadeInOnScroll({ children, className = '', delay = 0 }: { children: ReactElement<FadeChildProps>; className?: string; delay?: number }) {
+export function FadeInOnScroll({ children, className = '', delay = 0 }: { children: ReactNode; className?: string; delay?: number }) {
   const wrapperRef = useRef<HTMLDivElement>(null)
   const [visible, setVisible] = useState(false)
 
@@ -26,10 +24,6 @@ export function FadeInOnScroll({ children, className = '', delay = 0 }: { childr
     return () => observer.disconnect()
   }, [])
 
-  const revealState = visible
-    ? '!opacity-100 !translate-y-0'
-    : '[html.js-ready_&]:opacity-0 [html.js-ready_&]:translate-y-4'
-  const childClassName = [children.props.className, 'transition-[opacity,transform] duration-500 delay-[var(--reveal-delay)]', revealState].filter(Boolean).join(' ')
-  const childStyle = { ...children.props.style, '--reveal-delay': `${delay}ms` } as CSSProperties
-  return <div ref={wrapperRef} className={`contents ${className}`.trim()}>{cloneElement(children, { className: childClassName, style: childStyle })}</div>
+  const style = { '--reveal-delay': `${delay}ms` } as CSSProperties
+  return <div ref={wrapperRef} className={`fade-in-on-scroll ${className}`.trim()} data-visible={visible} style={style}>{children}</div>
 }

@@ -1,6 +1,4 @@
-import type { Config } from 'tailwindcss'
-
-const config: Config = {
+const config = {
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -10,7 +8,6 @@ const config: Config = {
     './types/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   darkMode: ['selector', 'html[data-theme="dark"]'],
-  corePlugins: { preflight: false },
   theme: {
     extend: {
       colors: {
@@ -101,4 +98,4 @@ const config: Config = {
   plugins: [],
 }
 
-export default config
+module.exports = config
