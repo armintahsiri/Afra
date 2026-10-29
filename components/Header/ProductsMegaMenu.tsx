@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import type { KeyboardEventHandler } from 'react'
-import { GamepadIcon, GiftIcon, SparkIcon } from '@/components/Shared/icons'
+import { FridgeIcon, KitchenIcon, WasherIcon } from '@/components/Shared/icons'
 import { Badge } from '@/components/Shared/Badge'
 import { productMenuColumns, featuredMenu } from '@/data/navigation'
 import { ROUTES } from '@/constants/routes'
@@ -17,7 +17,7 @@ export interface ProductsMegaMenuProps {
 }
 
 export function ProductsMegaMenu({ mobile = false, open = false, id, onNavigate, onKeyDown, onMouseEnter }: ProductsMegaMenuProps) {
-  const icons = { games: GamepadIcon, ai: SparkIcon, gift: GiftIcon }
+  const icons = { fridge: FridgeIcon, washer: WasherIcon, kitchen: KitchenIcon }
   const mobileVisibility = open ? 'grid' : 'hidden'
   const desktopVisibility = open
     ? 'visible translate-y-0 scale-100 opacity-100'

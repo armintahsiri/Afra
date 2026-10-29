@@ -9,7 +9,7 @@ const ThemeContext = createContext<ThemeContextValue>({ theme: 'light', toggleTh
 
 function getStoredTheme(): Theme {
   let saved: string | null = null
-  try { saved = window.localStorage.getItem('afrashop-theme') } catch { /* local preview storage can be blocked */ }
+  try { saved = window.localStorage.getItem('venus-theme') } catch { /* local preview storage can be blocked */ }
   return saved === 'dark' || saved === 'light' ? saved : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
 }
 
@@ -38,7 +38,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   function toggleTheme() {
     setTheme((current) => {
       const next = current === 'dark' ? 'light' : 'dark'
-      try { window.localStorage.setItem('afrashop-theme', next) } catch { /* keep the toggle working without storage */ }
+      try { window.localStorage.setItem('venus-theme', next) } catch { /* keep the toggle working without storage */ }
       return next
     })
   }

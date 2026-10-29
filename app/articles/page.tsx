@@ -14,9 +14,9 @@ export async function generateMetadata({ searchParams }: ArticlesPageProps): Pro
   const selectedCategory = ARTICLE_FILTERS.includes(category as (typeof ARTICLE_FILTERS)[number]) ? category : undefined
   const title = selectedCategory && selectedCategory !== 'همه' ? `مقالات ${selectedCategory}` : 'مقالات و آموزش'
   const description = selectedCategory && selectedCategory !== 'همه'
-    ? `مطالعه مقاله‌های دسته ${selectedCategory} در مجله افرا شاپ؛ راهنماها و نکته‌های دنیای دیجیتال.`
-    : 'راهنماهای خرید، اخبار بازی و آموزش‌های دنیای دیجیتال را در مجله افرا شاپ دنبال کن.'
-  return createPageMetadata({ title, description, path: ROUTES.ARTICLES, keywords: ['مقالات بازی', 'راهنمای خرید اکانت', 'اخبار هوش مصنوعی', ...(selectedCategory && selectedCategory !== 'همه' ? [selectedCategory] : [])] })
+    ? `مطالعه مقاله‌های دسته ${selectedCategory} در مجله ونوس؛ راهنماها و نکته‌های دنیای لوازم خانگی.`
+    : 'راهنماهای خرید، نکات نگهداری و اخبار لوازم خانگی را در مجله ونوس دنبال کن.'
+  return createPageMetadata({ title, description, path: ROUTES.ARTICLES, keywords: ['مقالات لوازم خانگی', 'راهنمای خرید لوازم خانگی', 'نگهداری لوازم خانگی', ...(selectedCategory && selectedCategory !== 'همه' ? [selectedCategory] : [])] })
 }
 
 export default function ArticlesPage() {

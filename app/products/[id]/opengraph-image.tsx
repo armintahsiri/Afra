@@ -16,9 +16,9 @@ export default async function ProductOpenGraphImage({ params }: ProductImageProp
   const { id } = await params
   const fontData = await readFile(path.join(process.cwd(), 'public/fonts/vazirmatn-700.ttf'))
   const product = productDetails.find((item) => item.id === id)
-  const title = product?.title || 'محصولات افرا شاپ'
-  const category = product?.displayCategory || 'محصول دیجیتال'
+  const title = product?.title || 'محصولات ونوس'
+  const category = product?.displayCategory || 'لوازم خانگی'
   const art1 = product?.art1 || '#2196F3'
   const art2 = product?.art2 || '#0D47A1'
-  return new ImageResponse(<div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '70px', color: 'white', background: `radial-gradient(circle at 15% 15%, ${art1}, transparent 45%), linear-gradient(135deg, ${art2}, #0D47A1)`, fontFamily: 'Vazirmatn' }}><div style={{ display: 'flex', fontSize: 26, opacity: .85 }}>افرا شاپ · {category}</div><div style={{ display: 'flex', marginTop: 24, fontSize: 62, fontWeight: 700, maxWidth: 1000 }}>{title}</div><div style={{ display: 'flex', marginTop: 24, fontSize: 28, color: '#E3F2FD' }}>تحویل سریع و پشتیبانی مطمئن</div></div>, { ...size, fonts: [{ name: 'Vazirmatn', data: fontData, weight: 700, style: 'normal' }] })
+  return new ImageResponse(<div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '70px', color: 'white', background: `radial-gradient(circle at 15% 15%, ${art1}, transparent 45%), linear-gradient(135deg, ${art2}, #0D47A1)`, fontFamily: 'Vazirmatn' }}><div style={{ display: 'flex', fontSize: 26, opacity: .85 }}>ونوس · {category}</div><div style={{ display: 'flex', marginTop: 24, fontSize: 62, fontWeight: 700, maxWidth: 1000 }}>{title}</div><div style={{ display: 'flex', marginTop: 24, fontSize: 28, color: '#E3F2FD' }}>گارانتی معتبر و نصب رایگان در محل</div></div>, { ...size, fonts: [{ name: 'Vazirmatn', data: fontData, weight: 700, style: 'normal' }] })
 }

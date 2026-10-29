@@ -1,5 +1,5 @@
 import type { MockOrder } from '@/types'
 export const mockOrders: MockOrder[] = [
-  { id: 'AF-1404-021', title: 'ChatGPT Plus — یک ماهه', status: 'تحویل داده شد', price: '۴۲۰ هزار تومان' },
-  { id: 'AF-1404-018', title: 'گیفت‌کارت پلی‌استیشن ۲۰$', status: 'تحویل داده شد', price: '۱٬۱۵۰ هزار تومان' },
+  { id: 'VN-1404-021', title: 'لباسشویی ال‌جی ۹ کیلویی', status: 'تحویل داده شد', price: '۴۲٬۵۰۰ هزار تومان' },
+  { id: 'VN-1404-018', title: 'یخچال فریزر سامسونگ RT55', status: 'تحویل داده شد', price: '۸۷٬۵۰۰ هزار تومان' },
 ]

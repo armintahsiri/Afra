@@ -15,7 +15,7 @@ export function ContactNeonSection() {
       <div className="relative z-[1] mx-auto mb-9 max-w-[620px]">
         <span className="mb-3 inline-flex items-center gap-2 rounded-full border border-teal/30 bg-teal/10 px-3 py-1.5 text-xs font-extrabold text-teal">همیشه در دسترس</span>
         <h2 id="contact-neon-title" className="mb-1.5 mt-0 text-[26px] font-extrabold text-text dark:text-white dark:[text-shadow:0_0_18px_rgba(255,255,255,.15)] max-[480px]:text-[22px]">با ما در ارتباط باش</h2>
-        <p className="m-0 text-sm leading-[1.9] text-muted dark:text-white/[.62] max-[480px]:text-[13px]">برای پشتیبانی، خبرها و گفت‌وگو درباره محصولات دیجیتال از راه‌های زیر با ما در تماس باش.</p>
+        <p className="m-0 text-sm leading-[1.9] text-muted dark:text-white/[.62] max-[480px]:text-[13px]">برای پشتیبانی، خبرها و گفت‌وگو درباره لوازم خانگی از راه‌های زیر با ما در تماس باش.</p>
       </div>
 
       <div className="relative z-[1] grid grid-cols-4 gap-[18px] max-[980px]:grid-cols-2 max-[768px]:gap-3 max-[480px]:gap-2.5">

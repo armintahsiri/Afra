@@ -12,7 +12,7 @@ Set this variable in the deployment environment:
 NEXT_PUBLIC_SITE_URL=https://your-production-domain.example
 ```
 
-`NEXT_PUBLIC_SITE_URL` is used for `metadataBase`, canonical URLs, Open Graph URLs, Twitter cards, the sitemap, and the robots sitemap reference. Replace the example value with the real Afra Shop domain before going live. The current fallback is `https://afrashop.ir` so local builds remain environment-agnostic.
+`NEXT_PUBLIC_SITE_URL` is used for `metadataBase`, canonical URLs, Open Graph URLs, Twitter cards, the sitemap, and the robots sitemap reference. Replace the example value with the real Venus Shop domain before going live. The current fallback is `https://venusshop.ir` so local builds remain environment-agnostic.
 
 ## Production commands
 
@@ -27,7 +27,7 @@ npm start
 
 The following features are intentionally frontend mocks and must be connected to a trusted backend before a real launch:
 
-- ZarinPal/payment processing and payment callbacks
+- Payment processing and payment callbacks
 - Authentication, passwords, sessions, and account security
 - Cart persistence and order history
 - Newsletter submission

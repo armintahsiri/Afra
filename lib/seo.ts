@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import { parsePriceInThousands } from '@/lib/format'
 
-export const SITE_NAME = 'افرا شاپ'
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://afrashop.ir'
-export const DEFAULT_DESCRIPTION = 'فروشگاه اکانت بازی، اشتراک هوش مصنوعی و گیفت‌کارت با تحویل سریع و پشتیبانی مطمئن.'
+export const SITE_NAME = 'ونوس'
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://venusshop.ir'
+export const DEFAULT_DESCRIPTION = 'فروشگاه لوازم خانگی ونوس؛ یخچال فریزر، ماشین لباسشویی، جاروبرقی و لوازم پخت‌وپز با گارانتی معتبر، ارسال سریع و نصب رایگان در محل.'
 export const DEFAULT_OG_IMAGE = '/opengraph-image'
 
 export function absoluteUrl(path = '/') {

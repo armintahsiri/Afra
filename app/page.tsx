@@ -13,7 +13,7 @@ import { TrustSection } from '@/components/Trust/TrustSection'
 import { createPageMetadata } from '@/lib/seo'
 import { BackToTop } from '@/components/Shared/BackToTop'
 
-export const metadata: Metadata = createPageMetadata({ title: 'فروشگاه محصولات دیجیتال', description: 'خرید اکانت بازی، اشتراک هوش مصنوعی و گیفت‌کارت با تحویل سریع و پشتیبانی مطمئن.', path: '/', keywords: ['فروشگاه دیجیتال', 'خرید اکانت بازی', 'ChatGPT Plus', 'گیفت‌کارت'] })
+export const metadata: Metadata = createPageMetadata({ title: 'فروشگاه لوازم خانگی', description: 'خرید یخچال فریزر، ماشین لباسشویی، جاروبرقی و لوازم پخت‌وپز با گارانتی معتبر، ارسال سریع و نصب رایگان.', path: '/', keywords: ['فروشگاه لوازم خانگی', 'خرید یخچال فریزر', 'ماشین لباسشویی', 'جاروبرقی'] })
 
 export default function HomePage() {
   return <><AnnouncementBar /><Header /><main><Hero /><PresaleSection /><OffersSection /><NewestItemsSection /><AllProductsSection /><SubscriptionsSection /><TrustSection /><ContactNeonSection /><ArticlesSection /></main><BackToTop /><Footer /></>

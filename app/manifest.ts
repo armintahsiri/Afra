@@ -2,9 +2,9 @@ import type { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'افرا شاپ',
-    short_name: 'افرا شاپ',
-    description: 'فروشگاه محصولات دیجیتال افرا شاپ',
+    name: 'ونوس',
+    short_name: 'ونوس',
+    description: 'فروشگاه لوازم خانگی ونوس',
     start_url: '/',
     display: 'standalone',
     background_color: '#eceef2',

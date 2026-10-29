@@ -19,7 +19,7 @@ interface CartContextValue {
 }
 
 const CartContext = createContext<CartContextValue | undefined>(undefined)
-const storageKey = 'afrashop-cart'
+const storageKey = 'venus-cart'
 
 function parseStoredCart(value: string | null): CartItem[] {
   if (!value) return []

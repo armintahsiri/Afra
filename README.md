@@ -1,4 +1,4 @@
-# afrashop — فروشگاه دیجیتال با Next.js
+# venus — فروشگاه لوازم خانگی با Next.js
 
 این پروژه یک frontend ماژولار با Next.js App Router و TypeScript است. مسیرهای اصلی در `app/`، کامپوننت‌های reusable در `components/`، داده‌های mock در `data/` و تایپ‌ها/ثابت‌ها در `types/` و `constants/` قرار دارند.
 

@@ -14,9 +14,9 @@ export async function generateMetadata({ searchParams }: ProductsPageProps): Pro
   const selectedCategory = PRODUCT_FILTERS.includes(category as (typeof PRODUCT_FILTERS)[number]) ? category : undefined
   const title = selectedCategory && selectedCategory !== 'همه' ? `محصولات ${selectedCategory}` : 'همه محصولات'
   const description = selectedCategory && selectedCategory !== 'همه'
-    ? `مشاهده محصولات دسته ${selectedCategory} در افرا شاپ؛ خرید دیجیتال با تحویل سریع و پشتیبانی مطمئن.`
-    : 'مشاهده و فیلتر همه محصولات دیجیتال افرا شاپ؛ از بازی و اکانت هوش مصنوعی تا گیفت‌کارت.'
-  return createPageMetadata({ title, description, path: ROUTES.PRODUCTS, keywords: ['محصولات افرا شاپ', 'خرید اکانت بازی', 'خرید گیفت‌کارت', ...(selectedCategory && selectedCategory !== 'همه' ? [selectedCategory] : [])] })
+    ? `مشاهده محصولات دسته ${selectedCategory} در ونوس؛ با گارانتی رسمی، ارسال سریع و نصب رایگان.`
+    : 'مشاهده و فیلتر همه محصولات لوازم خانگی ونوس؛ از یخچال فریزر و ماشین لباسشویی تا جاروبرقی.'
+  return createPageMetadata({ title, description, path: ROUTES.PRODUCTS, keywords: ['محصولات ونوس', 'خرید لوازم خانگی', 'خرید یخچال فریزر', ...(selectedCategory && selectedCategory !== 'همه' ? [selectedCategory] : [])] })
 }
 
 export default function ProductsPage() {

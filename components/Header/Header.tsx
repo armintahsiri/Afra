@@ -121,9 +121,9 @@ export function Header() {
     <>
       <header className={`sticky top-3.5 z-50 mx-auto mt-3.5 max-w-[1200px] rounded-[22px] border border-white/[.6] bg-header-bg ${headerShadowClass} backdrop-blur-[24px] backdrop-saturate-[200%] transition-[box-shadow,border-color] duration-200 dark:border-white/[.18] max-[1240px]:mx-3.5 max-[768px]:mx-2 max-[768px]:top-2 max-[768px]:mt-2 max-[768px]:rounded-[18px] after:pointer-events-none after:absolute after:inset-x-3.5 after:bottom-[-1px] after:h-0.5 after:rounded-full after:bg-[linear-gradient(90deg,#0D47A1,#2196F3,#90CAF9)] after:opacity-[.72] after:content-['']`}>
         <div className="mx-auto flex max-w-[1240px] items-center justify-between gap-6 px-[22px] py-3 transition-[padding] duration-200 max-[768px]:gap-2.5 max-[768px]:px-3 max-[768px]:py-[9px] max-[480px]:gap-1 max-[480px]:px-2.5 max-[480px]:py-2">
-          <Link href={ROUTES.HOME} className="flex items-center gap-2.5 text-[19px] font-bold text-text max-[768px]:gap-2 max-[768px]:text-[17px] max-[480px]:text-[15px]" aria-label="صفحه اصلی afrashop">
-            <Image className="h-[38px] w-[38px] shrink-0 rounded-[9px] object-contain object-center drop-shadow-[0_2px_5px_color-mix(in_srgb,var(--gold)_28%,transparent)] max-[768px]:h-8 max-[768px]:w-8 max-[480px]:h-[30px] max-[480px]:w-[30px]" src="/logo-mark-transparent.png" alt="نشان افرا شاپ" width={38} height={38} priority />
-            afrashop
+          <Link href={ROUTES.HOME} className="flex items-center gap-2.5 text-[19px] font-bold text-text max-[768px]:gap-2 max-[768px]:text-[17px] max-[480px]:text-[15px]" aria-label="صفحه اصلی venus">
+            <Image className="h-[38px] w-[38px] shrink-0 rounded-[9px] object-contain object-center drop-shadow-[0_2px_5px_color-mix(in_srgb,var(--gold)_28%,transparent)] max-[768px]:h-8 max-[768px]:w-8 max-[480px]:h-[30px] max-[480px]:w-[30px]" src="/logo-mark-transparent.png" alt="نشان ونوس" width={38} height={38} priority />
+            venus
           </Link>
           <nav className="flex items-center gap-1.5 max-[768px]:hidden" aria-label="ناوبری اصلی">{nav()}</nav>
           <div className="flex items-center gap-2.5 max-[768px]:gap-1.5 max-[480px]:gap-1">

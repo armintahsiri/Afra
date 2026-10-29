@@ -11,6 +11,8 @@ function productSearchText(item: (typeof searchableProducts)[number]) {
   if ('displayCategory' in item) fields.push(item.displayCategory)
   if ('category' in item) fields.push(item.category)
   if ('tag' in item) fields.push(item.tag)
+  if ('brand' in item && item.brand) fields.push(item.brand)
+  if ('kind' in item && item.kind) fields.push(item.kind)
   return fields.join(' ')
 }
 

@@ -12,8 +12,9 @@ export function validateBuyerInfo(values: BuyerInfo): BuyerInfoErrors {
   if (values.fullName.trim().length < 3) errors.fullName = 'نام و نام خانوادگی را وارد کن.'
   if (!isValidIranianPhone(values.phone)) errors.phone = 'شماره موبایل باید با 09 و ۱۱ رقم وارد شود.'
   if (values.email && !isValidEmail(values.email)) errors.email = 'فرمت ایمیل درست نیست.'
-  if (values.deliveryContact.trim().length < 3) errors.deliveryContact = values.deliveryMethod === 'telegram' ? 'آیدی تلگرام را وارد کن.' : 'ایمیل تحویل را وارد کن.'
-  if (values.deliveryMethod === 'email' && !isValidEmail(values.deliveryContact)) errors.deliveryContact = 'ایمیل تحویل معتبر نیست.'
+  if (values.deliveryMethod === 'courier') {
+    if (values.deliveryContact.trim().length < 10) errors.deliveryContact = 'آدرس کامل تحویل را وارد کن.'
+  } else if (values.deliveryContact.trim().length < 3) errors.deliveryContact = 'زمان مراجعه حضوری را وارد کن.'
   return errors
 }
 

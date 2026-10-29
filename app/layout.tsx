@@ -37,13 +37,13 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: { default: SITE_NAME, template: `%s | ${SITE_NAME}` },
   description: DEFAULT_DESCRIPTION,
-  keywords: ['افرا شاپ', 'اکانت بازی', 'اکانت هوش مصنوعی', 'گیفت‌کارت', 'اشتراک دیجیتال'],
+  keywords: ['ونوس', 'فروشگاه لوازم خانگی', 'یخچال فریزر', 'ماشین لباسشویی', 'جاروبرقی', 'پخت‌وپز'],
   alternates: { canonical: '/' },
-  openGraph: { title: SITE_NAME, description: DEFAULT_DESCRIPTION, type: 'website', url: '/', siteName: SITE_NAME, locale: 'fa_IR', images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: `${SITE_NAME}؛ فروشگاه محصولات دیجیتال` }] },
+  openGraph: { title: SITE_NAME, description: DEFAULT_DESCRIPTION, type: 'website', url: '/', siteName: SITE_NAME, locale: 'fa_IR', images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: `${SITE_NAME}؛ فروشگاه لوازم خانگی` }] },
   twitter: { card: 'summary_large_image', title: SITE_NAME, description: DEFAULT_DESCRIPTION, images: [DEFAULT_OG_IMAGE] },
 }
 
-const themeScript = `(() => { try { document.documentElement.classList.add('js-ready'); const saved = localStorage.getItem('afrashop-theme'); const theme = saved === 'dark' || saved === 'light' ? saved : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); document.documentElement.setAttribute('data-theme', theme); } catch (_) {} })()`
+const themeScript = `(() => { try { document.documentElement.classList.add('js-ready'); const saved = localStorage.getItem('venus-theme'); const theme = saved === 'dark' || saved === 'light' ? saved : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); document.documentElement.setAttribute('data-theme', theme); } catch (_) {} })()`
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return <html lang="fa" dir="rtl" className={`${vazirmatn.variable} ${ibmPlexMono.variable}`} suppressHydrationWarning><head><script dangerouslySetInnerHTML={{ __html: themeScript }} /></head><body suppressHydrationWarning><ThemeProvider><AuthProvider><CartProvider><ToastProvider>{children}</ToastProvider></CartProvider></AuthProvider></ThemeProvider></body></html>

@@ -3,7 +3,7 @@ import { calculateCartItemCount, calculateCartSubtotal } from '../components/Sha
 import { parsePriceInThousands } from '../lib/format'
 import type { CartItem, CartLine } from '../types'
 
-const line = (price: string, quantity: number): CartLine => ({ productId: 'test', quantity, product: { id: 'test', art: 'T', title: 'Test', category: 'بازی‌ها', displayCategory: 'بازی', price, description: 'تست', status: 'in_stock', art1: '#000', art2: '#111' } })
+const line = (price: string, quantity: number): CartLine => ({ productId: 'test', quantity, product: { id: 'test', art: 'T', title: 'Test', category: 'پخت‌وپز', displayCategory: 'سرخ‌کن هوایی', price, description: 'تست', status: 'in_stock', art1: '#000', art2: '#111' } })
 
 describe('cart calculations', () => {
   it('parses Persian prices and calculates subtotal', () => {

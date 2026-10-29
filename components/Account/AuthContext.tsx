@@ -13,7 +13,7 @@ interface AuthContextValue {
 }
 
 const AuthContext = createContext<AuthContextValue | undefined>(undefined)
-const storageKey = 'afrashop-mock-user'
+const storageKey = 'venus-mock-user'
 
 function isMockUser(value: unknown): value is MockUser {
   if (!value || typeof value !== 'object') return false
@@ -34,7 +34,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setUser(nextUser)
     try { window.localStorage.setItem(storageKey, JSON.stringify(nextUser)) } catch { /* mock auth still works for the current session */ }
   }
-  async function login(identifier: string, password: string) { void password; await new Promise((resolve) => window.setTimeout(resolve, 700)); persist({ id: 'mock-user-1', name: 'کاربر افرا', phone: identifier.startsWith('09') ? identifier : '۰۹۱۲۰۰۰۰۰۰۰', email: identifier.includes('@') ? identifier : undefined }) }
+  async function login(identifier: string, password: string) { void password; await new Promise((resolve) => window.setTimeout(resolve, 700)); persist({ id: 'mock-user-1', name: 'کاربر ونوس', phone: identifier.startsWith('09') ? identifier : '۰۹۱۲۰۰۰۰۰۰۰', email: identifier.includes('@') ? identifier : undefined }) }
   async function signup(nextUser: Omit<MockUser, 'id'> & { password: string }) { await new Promise((resolve) => window.setTimeout(resolve, 800)); persist({ id: `mock-user-${Date.now()}`, name: nextUser.name, phone: nextUser.phone, email: nextUser.email }) }
   function logout() {
     setUser(null)

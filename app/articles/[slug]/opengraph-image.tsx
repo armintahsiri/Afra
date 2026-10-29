@@ -16,9 +16,9 @@ export default async function ArticleOpenGraphImage({ params }: ArticleImageProp
   const { slug } = await params
   const fontData = await readFile(path.join(process.cwd(), 'public/fonts/vazirmatn-700.ttf'))
   const article = articles.find((item) => item.slug === slug)
-  const title = article?.title || 'مقالات افرا شاپ'
-  const category = article?.category || 'مجله افرا شاپ'
+  const title = article?.title || 'مقالات ونوس'
+  const category = article?.category || 'مجله ونوس'
   const art1 = article?.art1 || '#5e5ce6'
   const art2 = article?.art2 || '#171338'
-  return new ImageResponse(<div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '70px', color: 'white', background: `radial-gradient(circle at 15% 15%, ${art1}, transparent 45%), linear-gradient(135deg, ${art2}, #0D47A1)`, fontFamily: 'Vazirmatn' }}><div style={{ display: 'flex', fontSize: 26, opacity: .85 }}>افرا شاپ · {category}</div><div style={{ display: 'flex', marginTop: 24, fontSize: 58, fontWeight: 700, maxWidth: 1000 }}>{title}</div><div style={{ display: 'flex', marginTop: 24, fontSize: 28, color: '#E3F2FD' }}>راهنما و اخبار دنیای دیجیتال</div></div>, { ...size, fonts: [{ name: 'Vazirmatn', data: fontData, weight: 700, style: 'normal' }] })
+  return new ImageResponse(<div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '70px', color: 'white', background: `radial-gradient(circle at 15% 15%, ${art1}, transparent 45%), linear-gradient(135deg, ${art2}, #0D47A1)`, fontFamily: 'Vazirmatn' }}><div style={{ display: 'flex', fontSize: 26, opacity: .85 }}>ونوس · {category}</div><div style={{ display: 'flex', marginTop: 24, fontSize: 58, fontWeight: 700, maxWidth: 1000 }}>{title}</div><div style={{ display: 'flex', marginTop: 24, fontSize: 28, color: '#E3F2FD' }}>راهنما و اخبار دنیای لوازم خانگی</div></div>, { ...size, fonts: [{ name: 'Vazirmatn', data: fontData, weight: 700, style: 'normal' }] })
 }

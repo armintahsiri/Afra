@@ -3,5 +3,5 @@ export const contactChannels: ContactChannel[] = [
   { id: 'discord', label: 'سرور دیسکورد', icon: 'discord', variant: 'discord', disabled: true },
   { id: 'telegram-group', label: 'گروه تلگرام', icon: 'telegram', variant: 'telegram', disabled: true },
   { id: 'telegram-channel', label: 'کانال تلگرام', icon: 'telegram', variant: 'telegram-channel', disabled: true },
-  { id: 'email', label: 'ایمیل پشتیبانی', href: 'mailto:hello@afrashop.ir', icon: 'email', variant: 'email' },
+  { id: 'email', label: 'ایمیل پشتیبانی', href: 'mailto:hello@venusshop.ir', icon: 'email', variant: 'email' },
 ]
